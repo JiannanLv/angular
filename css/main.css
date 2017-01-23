@@ -1,0 +1,95 @@
+/* 用户列表样式 */
+.user-list,.create-user,h2,.act-data {
+    margin:0 auto;
+    width:80%;
+}
+
+.user-list dt,
+.user-list dd,
+.user-list dt span,
+.user-list dd div,
+.user-list dd span {
+    float:left;
+    font-size:16px;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+}
+
+.user-list dt,.user-list dd {
+    border-bottom:1px #ccc solid;
+    float:left;
+    width:100%;
+}
+
+.user-list dt span:first-child,
+.user-list dd span:first-child,
+.user-list dt span:nth-of-type(2),
+.user-list dd span:nth-of-type(2) {
+    width:30%;
+}
+.user-list dt span:last-child,
+.user-list dd div {
+    width:40%;
+}
+
+.btn {
+    background:#008000;
+    border-radius:5px;
+    color:#fff;
+    cursor:pointer;
+    font-size:16px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+}
+
+.btn:hover{
+    background:#006400;
+}
+
+.user-list dd div em {
+    display:inline-block;
+    width:30%;
+}
+
+.create-user {
+    padding:50px 0 30px;
+}
+.create-user span,.create-user input {
+    display:block;
+    width:120px;
+}
+
+.create-user input:disabled {
+    background:#ccc;
+    color:#444;
+    cursor:not-allowed;
+}
+
+h2 {
+    font-size:20px;
+    line-height:40px;
+}
+.act-data li { border-bottom:1px #eee solid;padding:10px 0;width:100%; }
+.act-data li,.act-data li label,.act-data li input {
+    float:left;
+    font-size:16px;
+}
+.act-data li,.act-data li label {
+    height:50px;
+    line-height:50px;
+}
+
+.act-data li label {
+    margin-right:5%;
+    text-align:right;
+    width:15%;
+}
+.act-data li input {
+    border:1px #ccc solid;
+    height:18px;
+    line-height:18px;
+    padding:15px 0 15px 15px;
+    width:60%;
+}

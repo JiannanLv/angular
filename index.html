@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>用户操作</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-controller="myCtrl">
+    <dl class="user-list clearfix">
+        <dt>
+            <span>姓氏</span>
+            <span>名字</span>
+            <span>操作</span>
+        </dt>
+        <dd ng-repeat="item in users">
+            <span ng-bind="item.firstName"></span>
+            <span ng-bind="item.lastName"></span>
+            <div>
+                <em class="btn" ng-click="editFun(item._id,item.firstName,item.lastName)">编辑</em>
+                <em class="btn" ng-click="delUser(item._id)">删除</em>
+            </div>
+        </dd>
+    </dl>
+    <!-- 创建新用户 -->
+    <div class="create-user"><span class="btn" ng-click="createUser()">创建新用户</span></div>
+    <h2 ng-show="editBool">创建新用户</h2>
+    <h2 ng-hide="editBool">编辑用户</h2>
+    <ul class="act-data clearfix">
+        <li>
+            <label>姓氏</label>
+            <input ng-model="firstName" ng-change="changeFun()" type="text" name="" />
+        </li>
+        <li>
+            <label>名字</label>
+            <input ng-model="lastName" ng-change="changeFun()" type="text" name="" />
+        </li>
+        <li ng-show="editBool">
+            <label>密码</label>
+            <input ng-model="pass1" ng-change="changeFun()" type="password" name="" />
+        </li>
+        <li ng-show="editBool">
+            <label>重复密码</label>
+            <input ng-model="pass2" ng-change="changeFun()" type="password" name="" />
+        </li>
+    </ul>
+    <div class="create-user"><input ng-click="saveFun()" value="保存" ng-disabled="disa" type="button" class="btn" /></div>
+</body>
+</html>
+<script type="text/javascript" src="js/angularjs/angular.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
